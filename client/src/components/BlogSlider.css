@@ -1,0 +1,11 @@
+.posts {
+    padding: 0 60px;
+}
+
+.arrow-next {
+    right: -10px;
+}
+
+.arrow-prev {
+    left: -10px;
+}

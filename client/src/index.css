@@ -1,0 +1,247 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    user-select: none; /* Prevents dragging the image */
+  }
+
+  ul,
+  li {
+    padding: 0;
+    list-style: none;
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+  }
+
+  input,
+  textarea,
+  select {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  :root {
+    font-family: "Roboto Serif", serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--black);
+    background-color: var(--white);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --black: rgb(12, 12, 12);
+    --white: rgb(255, 255, 255);
+    --accent: rgb(173, 0, 0);
+    --light-accent: rgb(187, 0, 0);
+  }
+
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    -webkit-tap-highlight-color: transparent; /* Removes the blue highlight on mobile when you click the button or image */
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--accent);
+  }
+
+  body {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 1.55rem;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.55rem;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  main {
+    margin: 9rem 0 4rem 0 !important;
+  }
+
+  .wrapper {
+    max-width: 1440px;
+    padding: 0 2.5rem;
+    margin: 0 auto;
+  }
+
+  .btn {
+    color: var(--white);
+    font-size: 0.9rem;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    background-color: var(--accent);
+    width: fit-content;
+  }
+
+  .btn:hover {
+    background-color: var(--light-accent);
+  }
+
+  .link {
+    text-decoration: underline;
+  }
+
+  .link:hover {
+    opacity: 0.8;
+  }
+
+  input, textarea {
+    padding: 0.5rem;
+    border: solid 1px var(--color-gray-300);
+    align-self: flex-start;
+  }
+
+  input {
+    border-radius: 999px;
+  }
+
+  textarea {
+    border-radius: 8px;
+  }
+
+  /* @media (prefers-color-scheme: dark) {} */
+
+  @media only screen and (max-width: 1400px) {
+    body {
+      font-size: 16px;
+    }
+  }
+}
