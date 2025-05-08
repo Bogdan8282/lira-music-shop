@@ -22,24 +22,24 @@ export default function Register() {
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
+    <main className="wrapper">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-5 mb-10">
         <input
-          placeholder="Username"
+          placeholder="Ім'я"
           onChange={(e) => setForm({ ...form, username: e.target.value })}
         />
         <input
-          placeholder="Password"
+          placeholder="Пароль"
           type="password"
           onChange={(e) => setForm({ ...form, password: e.target.value })}
         />
         <input
-          placeholder="Profile Picture URL"
+          placeholder="URL картинки профілю"
           onChange={(e) => setForm({ ...form, profilePicture: e.target.value })}
         />
-        <button type="submit">Register</button>
+        <button type="submit" className="btn">Зареєструватись</button>
       </form>
-      <Link to="/login">Login instead</Link>
-    </>
+      <Link to="/login" className="link">Вже маєте акаунт? Увійти</Link>
+    </main>
   );
 }

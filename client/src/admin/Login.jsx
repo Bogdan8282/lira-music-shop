@@ -21,17 +21,17 @@ export default function Login() {
     <main className="wrapper">
       <form onSubmit={handleSubmit} className="flex flex-col gap-5 mb-10">
         <input
-          placeholder="Username"
+          placeholder="Ім'я"
           onChange={(e) => setForm({ ...form, username: e.target.value })}
         />
         <input
-          placeholder="Password"
+          placeholder="Пароль"
           type="password"
           onChange={(e) => setForm({ ...form, password: e.target.value })}
         />
-        <button type="submit" className="btn">Login</button>
+        <button type="submit" className="btn">Увійти</button>
       </form>
-      <Link to="/register" className="link">Register instead</Link>
+      <Link to="/register" className="link">Немає акаунта? Зареєструватись</Link>
     </main>
   );
 }
