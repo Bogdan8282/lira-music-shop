@@ -9,3 +9,8 @@
 .arrow-prev {
     left: -10px;
 }
+
+#blog .swiper-button-prev,
+#blog .swiper-button-next {
+  display: none;
+}

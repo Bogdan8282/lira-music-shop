@@ -4,6 +4,8 @@ import { formatDistanceToNow, format } from "date-fns";
 import { uk } from "date-fns/locale";
 import ReactMarkdown from "react-markdown";
 
+import "./PostPage.css";
+
 function PostPage() {
   const { id } = useParams();
   const [post, setPost] = useState(null);
@@ -40,7 +42,7 @@ function PostPage() {
   }
 
   return (
-    <main className="wrapper px-12 flex flex-col gap-8">
+    <main className="post wrapper px-12 flex flex-col gap-8">
       <div className="flex gap-5">
         {post.image && (
           <img

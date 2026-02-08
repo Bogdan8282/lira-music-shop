@@ -7,7 +7,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white border-b border-gray-300 z-50">
+    <header className="fixed top-0 left-0 w-full bg-white outline outline-gray-300 z-50 [--header-h:82px]">
       <div className="wrapper min-w-full py-4 flex items-center justify-between relative">
         <Link to="/" className="flex font-[Kurale] gap-2 items-center z-10">
           <img src="/lyre.svg" alt="logo" />

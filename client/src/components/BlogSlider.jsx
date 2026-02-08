@@ -73,23 +73,18 @@ const PostSlider = ({ posts }) => {
         <ChevronRight size={60} strokeWidth={1.5} />
       </button>
       <Swiper
-        className="w-full post-slider"
         modules={[Navigation, Pagination, A11y]}
         spaceBetween={40}
         slidesPerView={1}
-        onSwiper={(swiper) => (swiperRef.current = swiper)}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
+        onBeforeInit={(swiper) => {
+          swiper.params.navigation.prevEl = prevRef.current;
+          swiper.params.navigation.nextEl = nextRef.current;
         }}
+        navigation
         loop={posts.length > 3}
         breakpoints={{
-          800: {
-            slidesPerView: 2,
-          },
-          1000: {
-            slidesPerView: 3,
-          },
+          800: { slidesPerView: 2 },
+          1000: { slidesPerView: 3 },
         }}
       >
         {posts.map((post) => (
